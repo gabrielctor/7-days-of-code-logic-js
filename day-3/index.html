@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 - 7 Days Of Code Lógica JS</title>
+</head>
+<body>
+    <script>
+        const side = prompt('Qual área você gostaria de seguir? Front-end ou Back-end?')
+        if(side === "Front-end") {
+            alert('Ótimo! Então você prefere o lado do usuário!')
+            const technology = prompt('Qual tecnologia vai escolher para estudar? React ou Vue?')
+        } else if(side === "Back-end") {
+            alert('Que legal! Então você fica com o lado do servidor!')
+            const technology = prompt('Qual tecnologia você prefere para estudar? Javascript ou Python?')
+        }
+
+        alert('Se optou por seguir uma área específica, tudo bem! Mas você também pode se tornar Fullstack e lidar com ambas as áreas!')
+        const sideOption = prompt('Se preferir seguir com a área escolhida, responda "continuar". Se preferir se aprimorar ainda mais, responda "Fullstack".')
+        if(sideOption === "continuar") {
+            alert('Tudo bem! Se especializar é um bom caminho.')
+        } else if(sideOption === "Fullstack") {
+            alert('Certo! Assim você se tornará um desenvolvedor bem flexível.')
+        }
+        
+        while(true) {
+            const newTechnology = prompt('Qual outra tecnologia você gostaria de aprender?')
+            alert(`${newTechnology} é uma boa escolha!`)
+            const optionNewTechnology = prompt('Tem mais alguma?')
+            if(optionNewTechnology != "sim") {
+                break
+            }
+        }
+        alert('Tudo bem! Bons estudos!')
+    </script>
+</body>
+</html>
