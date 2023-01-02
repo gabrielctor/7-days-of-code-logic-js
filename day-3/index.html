@@ -15,6 +15,8 @@
         } else if(side === "Back-end") {
             alert('Que legal! Então você fica com o lado do servidor!')
             const technology = prompt('Qual tecnologia você prefere para estudar? Javascript ou Python?')
+        } else {
+            alert('Você não informou uma área válida.')
         }
 
         alert('Se optou por seguir uma área específica, tudo bem! Mas você também pode se tornar Fullstack e lidar com ambas as áreas!')
@@ -23,13 +25,15 @@
             alert('Tudo bem! Se especializar é um bom caminho.')
         } else if(sideOption === "Fullstack") {
             alert('Certo! Assim você se tornará um desenvolvedor bem flexível.')
+        } else {
+            alert('Você não informou uma opção válida.')
         }
         
         while(true) {
             const newTechnology = prompt('Qual outra tecnologia você gostaria de aprender?')
             alert(`${newTechnology} é uma boa escolha!`)
-            const optionNewTechnology = prompt('Tem mais alguma?')
-            if(optionNewTechnology != "sim") {
+            const optionNewTechnology = prompt('Tem mais alguma? Se sim, responda "continuar".')
+            if(optionNewTechnology != "continuar") {
                 break
             }
         }
