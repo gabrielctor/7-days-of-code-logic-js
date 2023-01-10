@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 - 7 Days Of Code Lógica JS</title>
+</head>
+<body>
+    <script>
+        let fruit = []
+        let dairyProduct = []
+        let frozen = []
+        let candy = []
+        
+        while(true) {
+            const addOrRemoveOption = prompt('Você gostaria de adicionar ou remover um item da lista de compras? Você também pode "finalizar" sua lista!').toLowerCase()
+            if(addOrRemoveOption === "adicionar") {
+                let product = prompt('Qual produto gostaria de adicionar?').toLowerCase()
+                let category = prompt('Qual a categoria do produto?').toLowerCase()
+                if(category === "frutas") {
+                    fruit.push(product)
+                    alert('Produto adicionado com sucesso!')
+                } else if(category === "laticínios") {
+                    dairyProduct.push(product)
+                    alert('Produto adicionado com sucesso!')
+                } else if(category === "congelados") {
+                    frozen.push(product)
+                    alert('Produto adicionado com sucesso!')
+                } else if(category === "doces") {
+                    candy.push(product)
+                    alert('Produto adicionado com sucesso!')
+                } else {
+                    alert('Categoria inválida.')
+                }
+            } else if(addOrRemoveOption === "remover") {
+                alert(`• Lista de Compras • \n Frutas: ${fruit} \n Laticínios: ${dairyProduct} \n Congelados: ${frozen} \n Doces: ${candy}`)
+                const product = prompt('Qual item gostaria de remover?').toLowerCase()
+                if(fruit.includes(product)) {
+                    const productIndex = fruit.indexOf(product)
+                    fruit.splice(productIndex, 1)
+                    alert('Produto removido com sucesso!')
+                } else if(dairyProduct.includes(product)) {
+                    const productIndex = dairyProduct.indexOf(product)
+                    dairyProduct.splice(productIndex, 1)
+                    alert('Produto removido com sucesso!')
+                } else if(frozen.includes(product)) {
+                    const productIndex = frozen.indexOf(product)
+                    frozen.splice(productIndex, 1)
+                    alert('Produto removido com sucesso!')
+                } else if(candy.includes(product)) {
+                    const productIndex = candy.indexOf(product)
+                    candy.splice(productIndex, 1)
+                    alert('Produto removido com sucesso!')
+                } else {
+                    alert('Produto não encontrado')
+                }
+            } else if(addOrRemoveOption === "finalizar") {
+                break
+            } else {
+                alert('Resposta inválida.')
+            }
+        }
+        
+        fruit.sort()
+        dairyProduct.sort()
+        frozen.sort()
+        candy.sort()
+
+        alert(`• Lista de Compras • \n Frutas: ${fruit} \n Laticínios: ${dairyProduct} \n Congelados: ${frozen} \n Doces: ${candy}`)
+    </script>
+</body>
+</html>
