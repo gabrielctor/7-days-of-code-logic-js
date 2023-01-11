@@ -8,22 +8,22 @@
 </head>
 <body>
     <script>
-        const side = prompt('Qual área você gostaria de seguir? Front-end ou Back-end?')
-        if(side === "Front-end") {
+        const side = prompt('Qual área você gostaria de seguir? Front-end ou Back-end?').toLowerCase()
+        if(side === "front-end") {
             alert('Ótimo! Então você prefere o lado do usuário!')
-            const technology = prompt('Qual tecnologia vai escolher para estudar? React ou Vue?')
-        } else if(side === "Back-end") {
+            const technology = prompt('Qual tecnologia vai escolher para estudar? React ou Vue?').toLowerCase()
+        } else if(side === "back-end") {
             alert('Que legal! Então você fica com o lado do servidor!')
-            const technology = prompt('Qual tecnologia você prefere para estudar? Javascript ou Python?')
+            const technology = prompt('Qual tecnologia você prefere para estudar? Javascript ou Python?').toLowerCase()
         } else {
             alert('Você não informou uma área válida.')
         }
 
         alert('Se optou por seguir uma área específica, tudo bem! Mas você também pode se tornar Fullstack e lidar com ambas as áreas!')
-        const sideOption = prompt('Se preferir seguir com a área escolhida, responda "continuar". Se preferir se aprimorar ainda mais, responda "Fullstack".')
+        const sideOption = prompt('Se preferir seguir com a área escolhida, responda "continuar". Se preferir se aprimorar ainda mais, responda "fullstack".').toLowerCase()
         if(sideOption === "continuar") {
             alert('Tudo bem! Se especializar é um bom caminho.')
-        } else if(sideOption === "Fullstack") {
+        } else if(sideOption === "fullstack") {
             alert('Certo! Assim você se tornará um desenvolvedor bem flexível.')
         } else {
             alert('Você não informou uma opção válida.')
@@ -32,7 +32,7 @@
         while(true) {
             const newTechnology = prompt('Qual outra tecnologia você gostaria de aprender?')
             alert(`${newTechnology} é uma boa escolha!`)
-            const optionNewTechnology = prompt('Tem mais alguma? Se sim, responda "continuar".')
+            const optionNewTechnology = prompt('Tem mais alguma? Se sim, responda "continuar".').toLowerCase()
             if(optionNewTechnology != "continuar") {
                 break
             }

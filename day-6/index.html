@@ -17,7 +17,7 @@
             const addOrRemoveOption = prompt('Você gostaria de adicionar ou remover um item da lista de compras? Você também pode "finalizar" sua lista!').toLowerCase()
             if(addOrRemoveOption === "adicionar") {
                 let product = prompt('Qual produto gostaria de adicionar?').toLowerCase()
-                let category = prompt('Qual a categoria do produto?').toLowerCase()
+                let category = prompt('Qual a categoria do produto? (frutas, laticínios, congelados ou doces)').toLowerCase()
                 if(category === "frutas") {
                     fruit.push(product)
                     alert('Produto adicionado com sucesso!')
