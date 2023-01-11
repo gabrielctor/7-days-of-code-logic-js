@@ -4,35 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
     <title>Day 4 - 7 Days Of Code Lógica JS</title>
 </head>
 <body>
-    <script>
-        function getRandomNumber(min, max) {
-            return Math.floor(Math.random() * (max - min) + min)
-        }
-        
-        let drawnNumber = getRandomNumber(0, 10)
-
-        for(i = 0; i < 3; i++) {
-            const numberOption = prompt('Eu pensei em um número de 0 a 10, tente adivinhar!')
-            let remainingAttempts = 2 - i
-
-            if(numberOption == drawnNumber) {
-                alert('Muito bem, você acertou!')
-                break
-            } else {
-                alert('Não foi dessa vez.')
-                const optionContinue = prompt(`Quer tentar de novo? Se sim responda "continuar". (Tentativas restantes: ${remainingAttempts}`).toLowerCase()
-                if(optionContinue != "continuar") {
-                    break
-                }
-            }
-        }
-
-        if(i == 3) {
-            alert(`Número de tentativas excedido! Você só tinha 3. O número sorteado era ${drawnNumber}.`)
-        }
-    </script>
+    <h1>Day 4 - 7 Days Of Code Lógica JS</h1>
 </body>
 </html>

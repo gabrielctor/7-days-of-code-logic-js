@@ -4,44 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
     <title>Day 5 - 7 Days Of Code Lógica JS</title>
 </head>
 <body>
-    <script>
-        let fruit = []
-        let dairyProduct = []
-        let frozen = []
-        let candy = []
-        
-        while(true) {
-            const addOption = prompt('Gostaria de adicionar um novo produto à lista de compras? (sim ou não)').toLowerCase()
-            if(addOption === "sim") {
-                let product = prompt('Qual produto gostaria de adicionar?')
-                let category = prompt('Qual a categoria do produto? (frutas, laticínios, congelados ou doces)').toLowerCase()
-                if(category === "frutas") {
-                    fruit.push(product)
-                } else if(category === "laticínios") {
-                    dairyProduct.push(product)
-                } else if(category === "congelados") {
-                    frozen.push(product)
-                } else if(category === "doces") {
-                    candy.push(product)
-                } else {
-                    alert('Categoria inválida.')
-                }
-            } else if(addOption === "não") {
-                break
-            } else {
-                alert('Resposta inválida.')
-            }
-        }
-        
-        fruit.sort()
-        dairyProduct.sort()
-        frozen.sort()
-        candy.sort()
-
-        alert(`• Lista de Compras • \n Frutas: ${fruit} \n Laticínios: ${dairyProduct} \n Congelados: ${frozen} \n Doces: ${candy}`)
-    </script>
+    <h1>Day 5 - 7 Days Of Code Lógica JS</h1>
 </body>
 </html>
